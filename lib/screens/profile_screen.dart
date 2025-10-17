@@ -1,3 +1,5 @@
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '/widgets/profile_card.dart';
 import 'package:flutter/material.dart';
 
@@ -29,14 +31,20 @@ class ProfileScreen extends StatelessWidget {
 
               Text(
                 nama,
-                style: const TextStyle(fontSize: 20, color: Colors.white),
+                style: GoogleFonts.montserrat(
+                  fontSize: 20,
+                  color: Colors.white,
+                ),
               ),
 
               const SizedBox(height: 5),
 
               Text(
                 pekerjaan,
-                style: const TextStyle(fontSize: 16, color: Colors.white70),
+                style: GoogleFonts.montserrat(
+                  fontSize: 16,
+                  color: Colors.white70,
+                ),
               ),
 
               const Padding(
@@ -51,18 +59,22 @@ class ProfileScreen extends StatelessWidget {
               ),
 
               const ProfileCard(
+                icon: FontAwesomeIcons.instagram,
                 text: 'INSTAGRAM',
                 url: 'https://www.instagram.com/mdeaupu/',
               ),
               const ProfileCard(
+                icon: FontAwesomeIcons.youtube,
                 text: 'YOUTUBE',
                 url: 'https://www.youtube.com/@mdeaupu',
               ),
               const ProfileCard(
+                icon: FontAwesomeIcons.github,
                 text: 'GITHUB',
                 url: 'https://github.com/mdeaupu',
               ),
               const ProfileCard(
+                icon: FontAwesomeIcons.linkedin,
                 text: 'LINKEDIN',
                 url: 'https://www.linkedin.com/in/mdeaupu/',
               ),

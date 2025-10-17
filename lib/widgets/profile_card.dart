@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProfileCard extends StatelessWidget {
   final String text;
+  final IconData icon;
   final String url;
 
-  const ProfileCard({super.key, required this.text, required this.url});
+  const ProfileCard({
+    super.key,
+    required this.icon,
+    required this.text,
+    required this.url,
+  });
 
   Future<void> _launchUrl() async {
     final Uri uri = Uri.parse(url);
@@ -29,17 +36,23 @@ class ProfileCard extends StatelessWidget {
           onTap: _launchUrl,
           child: Padding(
             padding: const EdgeInsets.symmetric(
-              vertical: 20.0,
-              horizontal: 20.0,
+              vertical: 10.0,
+              horizontal: 10.0,
             ),
             child: Center(
-              child: Text(
-                text,
-                style: const TextStyle(
-                  fontSize: 18,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
+              child: Row(
+                children: [
+                  Icon(icon, color: Colors.white, size: 30),
+                  const SizedBox(width: 20),
+                  Text(
+                    text,
+                    style: GoogleFonts.poppins(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Simple Profile UI',
+      title: 'Mobile Tugas 2',
       debugShowCheckedModeBanner: false,
       home: const ProfileScreen(),
     );
